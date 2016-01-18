@@ -207,9 +207,6 @@ class Template
         //过滤 <!--{}-->
         $template = preg_replace("/\<\!\-\-\{(.+?)\}\-\-\>/s", "{\\1}", $template);
 
-        //替换语言包变量
-        //$template = preg_replace("/\{lang\s+(.+?)\}/ies", "languagevar('\\1')", $template);
-
         //替换 PHP 换行符
         $template = str_replace("{LF}", "<?=\"\\n\"?>", $template);
 
